@@ -1,4 +1,6 @@
-http://del.icio.us/jay.smith/Syndication
+Syndication: RSS and the ATOM Bomb
+
+Related Links: http://del.icio.us/jay.smith/Syndication
 
 RSS
 -------------------------------------------------------------------------------
