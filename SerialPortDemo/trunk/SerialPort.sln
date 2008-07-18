@@ -1,0 +1,122 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CS Seperate Assembly", "CS Seperate Assembly", "{89C9AA4A-1D53-45A2-A911-35E797B5D505}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CS", "CS", "{7BE5488C-A429-45D3-A0E9-BC9DC32B8920}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VB", "VB", "{E77053B7-1B2C-4236-B8CC-996CE66D3946}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_SerialClient", "CS\CS_SerialClient\CS_SerialClient.csproj", "{8AB24002-367D-498D-AC0D-7209553D85FC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_SerialDevice", "CS\CS_SerialDevice\CS_SerialDevice.csproj", "{5BE521E6-1E31-45B5-BD92-E151294765AB}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serial", "CS\Serial\Serial.csproj", "{34C3289B-C4FC-4F6F-AAC4-BDEBFC0B635F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialClient", "CS\SerialClient\SerialClient.csproj", "{775F9EF9-860B-41C8-8848-18F03E126150}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialDevice", "CS\SerialDevice\SerialDevice.csproj", "{241C4952-94AF-43F9-8FB0-1C8CD9ED1A2D}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB_SerialClient", "VB\VB_SerialClient\VB_SerialClient.vbproj", "{690F07D5-BDC8-452D-B55B-309EA25A74BB}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB_SerialDevice", "VB\VB_SerialDevice\VB_SerialDevice.vbproj", "{E04A7C49-6963-40E4-9693-40488D5D4A15}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combined", "Combined\Combined.csproj", "{EBE08A0E-F48F-4E3A-868C-9C4991C361CD}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AB24002-367D-498D-AC0D-7209553D85FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB24002-367D-498D-AC0D-7209553D85FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB24002-367D-498D-AC0D-7209553D85FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB24002-367D-498D-AC0D-7209553D85FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE521E6-1E31-45B5-BD92-E151294765AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE521E6-1E31-45B5-BD92-E151294765AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE521E6-1E31-45B5-BD92-E151294765AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE521E6-1E31-45B5-BD92-E151294765AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C3289B-C4FC-4F6F-AAC4-BDEBFC0B635F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C3289B-C4FC-4F6F-AAC4-BDEBFC0B635F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C3289B-C4FC-4F6F-AAC4-BDEBFC0B635F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C3289B-C4FC-4F6F-AAC4-BDEBFC0B635F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775F9EF9-860B-41C8-8848-18F03E126150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775F9EF9-860B-41C8-8848-18F03E126150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775F9EF9-860B-41C8-8848-18F03E126150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775F9EF9-860B-41C8-8848-18F03E126150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{241C4952-94AF-43F9-8FB0-1C8CD9ED1A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{241C4952-94AF-43F9-8FB0-1C8CD9ED1A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{241C4952-94AF-43F9-8FB0-1C8CD9ED1A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{241C4952-94AF-43F9-8FB0-1C8CD9ED1A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{690F07D5-BDC8-452D-B55B-309EA25A74BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690F07D5-BDC8-452D-B55B-309EA25A74BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690F07D5-BDC8-452D-B55B-309EA25A74BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690F07D5-BDC8-452D-B55B-309EA25A74BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E04A7C49-6963-40E4-9693-40488D5D4A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04A7C49-6963-40E4-9693-40488D5D4A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04A7C49-6963-40E4-9693-40488D5D4A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04A7C49-6963-40E4-9693-40488D5D4A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE08A0E-F48F-4E3A-868C-9C4991C361CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE08A0E-F48F-4E3A-868C-9C4991C361CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE08A0E-F48F-4E3A-868C-9C4991C361CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE08A0E-F48F-4E3A-868C-9C4991C361CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34C3289B-C4FC-4F6F-AAC4-BDEBFC0B635F} = {89C9AA4A-1D53-45A2-A911-35E797B5D505}
+		{775F9EF9-860B-41C8-8848-18F03E126150} = {89C9AA4A-1D53-45A2-A911-35E797B5D505}
+		{241C4952-94AF-43F9-8FB0-1C8CD9ED1A2D} = {89C9AA4A-1D53-45A2-A911-35E797B5D505}
+		{EBE08A0E-F48F-4E3A-868C-9C4991C361CD} = {89C9AA4A-1D53-45A2-A911-35E797B5D505}
+		{8AB24002-367D-498D-AC0D-7209553D85FC} = {7BE5488C-A429-45D3-A0E9-BC9DC32B8920}
+		{5BE521E6-1E31-45B5-BD92-E151294765AB} = {7BE5488C-A429-45D3-A0E9-BC9DC32B8920}
+		{690F07D5-BDC8-452D-B55B-309EA25A74BB} = {E77053B7-1B2C-4236-B8CC-996CE66D3946}
+		{E04A7C49-6963-40E4-9693-40488D5D4A15} = {E77053B7-1B2C-4236-B8CC-996CE66D3946}
+	EndGlobalSection
+EndGlobal
