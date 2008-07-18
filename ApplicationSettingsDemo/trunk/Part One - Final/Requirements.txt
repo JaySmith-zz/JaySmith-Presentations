@@ -1,0 +1,16 @@
+Application Settings Requirements
+-----------------------------------------------------------
+
+1. Create a Windows Application to send an email message
+2. Email server and authentication information should be configurable 
+	by the user.
+3. All information should be logged to a txt file if the user
+	so desires.
+	
+As a user 
+I want to be able to send a message
+So that I can communicate with my manager
+
+As a user
+I want to be able to configure the email settings
+So that I can use a specific email server
