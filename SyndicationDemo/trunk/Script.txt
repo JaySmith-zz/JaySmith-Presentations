@@ -1,0 +1,126 @@
+http://del.icio.us/jay.smith/Syndication
+
+RSS
+-------------------------------------------------------------------------------
+RSS is a family of Web feed formats used to publish frequently updated content 
+such as blog entries, news headlines, and podcasts in a standardized format.  
+An RSS document (which is called a "feed", "web feed"[3], or "channel") 
+contains either a summary of content from an associated web site or the full 
+text. RSS makes it possible for people to keep up with web sites in an 
+automated manner that can be piped into special programs or filtered displays.
+
+The benefit of RSS is the aggregation of content from multiple Web sources in 
+one place. RSS content can be read using software called an "RSS reader", 
+"feed reader" or an "aggregator", which can be web-based or desktop-based. A 
+standardized XML file format allows the information to be published once and 
+viewed by many different programs. The user subscribes to a feed by entering 
+the feed's link into the reader or by clicking an RSS icon in a browser that 
+initiates the subscription process. The RSS reader checks the user's subscribed 
+feeds regularly for new content, downloads any updates that it finds, and 
+provides a user interface to monitor and read the feeds.
+
+The initials "RSS" are used to refer to the following formats:
+
+ATOM
+-------------------------------------------------------------------------------
+The name Atom applies to a pair of related standards. The Atom Syndication 
+Format is an XML language used for web feeds, while the Atom Publishing 
+Protocol (short AtomPub or APP) is a simple HTTP-based protocol for creating 
+and updating web resources.
+
+Web feeds allow software programs to check for updates published on a web site. 
+To provide a web feed, a site owner may use specialized software (such as a 
+content management system) that publishes a list (or "feed") of recent articles 
+or content in a standardized, machine-readable format. The feed can then be 
+downloaded by web sites that syndicate content from the feed, or by feed reader 
+programs that allow Internet users to subscribe to feeds and view their content.
+
+A feed contains entries, which may be headlines, full-text articles, excerpts, 
+summaries, and/or links to content on a web site, along with various metadata.
+
+The Atom format was developed as an alternative to RSS. Ben Trott was one of 
+the advocates of the new format that became Atom. He believed that RSS had 
+problems that ought to be fixed. Since RSS was frozen, and in any case had to 
+remain backward compatible, there could be advantages in doing a fresh design.
+
+WINDOWS COMMUNICATION AND THE SYNDICATION NAMESPACE
+-------------------------------------------------------------------------------
+With the relese of the .NET 3.5 Framework Microsoft made available the 
+Syndication namespace.  The Syndication namespace contains a set of 
+syndication-specific classes that allow applications to work with feed, feed
+items, and the related meta-data in a format independant way.  The approach 
+allows for feed formatters to be used to create the feed in the desired format.
+WCF provides two fomatters out-of-the box; Atom 1.0 and RSS 2.0. Microsoft also
+provided the ability to create custom formatters to be used if the defaults 
+don't provide the correct format; say a formater for iTunes which is RSS 2.0 
++ the iTunes special tags.
+
+PROXY AUTHENTICATION
+-------------------------------------------------------------------------------
+Before begining the demo we need to talk a little about proxy servers.  The 
+Tyson network requires proxy authentication to access site outside the network.
+If you are accessing an internal site to consume a feed then this is not an 
+issue, but since we are going to leverage an external feed we need to take
+extra steps to ensure we can access the desired resource.
+
+Lets talk a look at the ProxyHelper class in our solution.
+
+DEMO
+-------------------------------------------------------------------------------
+Create SyndicationDemo Console Application
+Add reference to System.ServiceModel.Web
+
+Add the SyndicationDemo class
+	Add the WriteItems method that takes a string for the URL to read
+	
+		public static void DisplayFeedTitles(string url)
+        {
+           using (var feedReader = XmlReader.Create(url))
+            {
+                var syndicationFeed = SyndicationFeed.Load(feedReader);
+
+                if (syndicationFeed == null) return;
+
+                foreach (var feedItem in syndicationFeed.Items)
+                    Console.WriteLine(feedItem.Title.Text);
+            }
+        }
+        
+Add to Main in Program.cs
+	        
+	var feedUrl = "http://neverwinternightspodcast.com/?feed=rss2&category_name=podcasts";
+    SyndicationDemo.DisplayFeedTitles(feedUrl);
+ 
+ 
+Add the CreateFeed method to the SyndicationDemo class
+ 
+		public static void CreateFeeed()
+        {
+            var feed = new SyndicationFeed("Tyson Podcast Network", "A custom rss feed", null);
+            var feedItems = new List<SyndicationItem>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                var feedItem = new SyndicationItem("Title: " + i, "This is item: " + i, null);
+                feedItems.Add(feedItem);
+            }
+
+            feed.Items = feedItems;
+
+            // Save as an RSS 2.0 Feed.
+            var rssWriter = XmlWriter.Create("rss_feed.xml");
+            var rssFormatter = new Rss20FeedFormatter(feed);
+            rssFormatter.WriteTo(rssWriter);
+            rssWriter.Close();
+
+            // Save as an Atom 1.0 Feed
+            //var atomWriter = XmlWriter.Create("atom_feed.xml");
+            //feed.SaveAsAtom10(atomWriter);
+            //atomWriter.Close();
+        }
+
+Add to Main in Program.cs
+	
+	SyndicationDemo.CreateFeeed();
+        
+        
